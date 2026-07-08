@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWS Portfolio Dashboard — July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="logo-text">The Wealth Society</div>
+    <div class="logo-sub">Portfolio Research — AI Supercycle Portfolio Framework Examples <em>(Educational Purposes Only)</em></div>
+  </div>
+  <div class="header-right">
+    <div class="header-badge">July 2026 · Allocation %</div>
+    <div class="header-badge gold">12–18 Month Thesis</div>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" id="tab-def" onclick="showTab(0)">Defensive Growth <span class="tab-risk">Conservative</span></button>
+  <button class="tab-btn" id="tab-agg" onclick="showTab(1)">Aggressive Growth <span class="tab-risk">Moderate</span></button>
+  <button class="tab-btn" id="tab-hc" onclick="showTab(2)">High Conviction <span class="tab-risk">Aggressive</span></button>
+  <button class="tab-btn" id="tab-changes" onclick="showTab(3)">What Changed <span class="tab-risk">Jul 2026</span></button>
+  <button class="tab-btn" id="tab-etf" onclick="showTab(4)">Thematic ETFs <span class="tab-risk">Holdings</span></button>
+  <button class="tab-btn" id="tab-matrix" onclick="showTab(5)">Portfolio Matrix</button>
+</div>
+
+<div class="howto">
+  <div class="howto-toggle" onclick="toggleHowTo()">
+    <div class="howto-pip"></div>
+    <span class="howto-title">Start Here — 4 Steps</span>
+    <span class="howto-sub">How to use this tool in under a minute — click to expand</span>
+    <svg class="howto-chevron" id="howto-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="howto-body" id="howto-body">
+    <div class="howto-inner">
+      <div style="font-size:12px;color:rgba(240,236,228,0.7);line-height:1.6;margin-bottom:12px;">
+        Inside TWS we teach a <strong style="color:#f0ece4;">4 Layer AI Supercycle Portfolio Framework</strong> for a simplified way to build your long term portfolio. A video explaining how to use this effectively is available inside Skool.
+      </div>
+      <div class="howto-grid">
+        <div class="howto-block">
+          <div class="label">① Pick Your Profile</div>
+          Choose the portfolio that matches your <strong>Wealth Risk Profile:</strong> Defensive Growth, Aggressive Growth, or High Conviction. Use the tabs above to switch between them.
+        </div>
+        <div class="howto-block">
+          <div class="label">② Study the Layers</div>
+          Every portfolio uses the same <strong>4-Layer Framework:</strong> Core ETFs → Thematic ETFs → Core Stocks → Asymmetric Bets. Each position shows a primary ticker and a <strong>Ticker Option</strong> — an alternative expression of the same idea.
+        </div>
+        <div class="howto-block">
+          <div class="label">③ Make It Yours</div>
+          The tickers are <strong>examples — not guarantees and not orders.</strong> The idea is the <strong>Layer + Sector</strong>. Any stock in the same Layer and Sector inside the Stock Playbook expresses the same idea — swap freely and the framework stays intact.<br>
+          <a class="playbook-btn" href="https://www.midasX.ai" target="_blank">→ Open the Stock Playbook</a>
+        </div>
+        <div class="howto-block">
+          <div class="label">④ Time Your Entry</div>
+          Before entering any position, check it on <strong>MidasX.ai</strong>: the <strong>Value Zone</strong> tells you whether the name is in a buy range or extended, and its <strong>Dollar Cost Averaging category</strong> tells you how to build the position — all at once or staged over time.
+        </div>
+      </div>
+      <div class="howto-footer">
+        <div class="profile-chips">
+          <span class="lbl">Which Profile?</span>
+          <span class="chip teal"><span class="dot"></span>Defensive Growth — Starter &amp; Strategist</span>
+          <span class="chip gold"><span class="dot"></span>Aggressive Growth — Explorer &amp; Comeback</span>
+          <span class="chip cream"><span class="dot"></span>High Conviction — Futurist &amp; Maverick</span>
+        </div>
+        <div class="howto-disclaimer">
+          <strong>Educational purposes only — not financial advice.</strong><br>
+          These are examples, not trading portfolios. Full TWS universe in the Notion Stock Playbook.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="port" id="port-def"></div>
+<div class="port" id="port-agg"></div>
+<div class="port" id="port-hc"></div>
+<div class="port" id="port-changes"></div>
+<div class="port" id="port-etf"></div>
+<div class="port" id="port-matrix"></div>
+
+<div class="site-footer">
+  <strong>Educational purposes only — not financial advice.</strong> Example portfolios for the TWS 4-Layer AI Supercycle Framework.
+  Live performance = frozen YTD baseline (prior holdings through Jul 7, 2026) plus current primary-ticker performance tracked from the Jul 6, 2026 close.
+  Tickers are sector examples — not guarantees; swap within the same Layer + Sector via the Stock Playbook at MidasX.ai. Check MidasX.ai Value Zones and DCA categories before entering. Ticker Options shown for illustration only. Data via Polygon.io; quotes may be delayed. Not a solicitation to buy or sell any security.
+</div>
+
+<script src="data.js?v=10"></script>
+<script src="changes.js?v=10"></script>
+<script src="app.js?v=10"></script>
+</body>
+</html>

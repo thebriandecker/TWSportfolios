@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "updated": "2026-07-07",
+    "source": "Brian's updated sector portfolio matrix (screenshot 2026-07-07)",
+    "note": "Chart 2 of Portfolio Matrix tab. Chart 1 (AI Supercycle Portfolio Framework by profile) is UNCHANGED from prior site."
+  },
+  "profiles": ["Starter", "Futurist", "Explorer", "Maverick", "Strategist", "Comeback"],
+  "coreEtfSleeve": {
+    "label": "Core ETF Sleeve — internal allocations",
+    "rows": [
+      { "sector": "Broad Based ETFs",  "color": "#8af8fa", "values": ["25–35%", "10–15%", "15–20%", "10–20%", "20–30%", "15–20%"] },
+      { "sector": "Gold & Commodities","color": "#d4a030", "values": ["5–10%", "3–7%", "3–7%", "3–7%", "5–10%", "5–10%"] },
+      { "sector": "Crypto",            "color": "#ff8c00", "values": ["5–10%", "10–15%", "5–10%", "10–15%", "5–10%", "5–15%"] },
+      { "sector": "Passive Income",    "color": "rgba(240,236,228,0.7)", "values": ["0–5%", "0–5%", "0–5%", "0–5%", "5–10%", "5–10%"] }
+    ],
+    "totalMidpoint": ["47.5", "30", "37.5", "37.5", "50", "45"]
+  },
+  "thematicStockSleeve": {
+    "label": "Thematic ETF + Stock Sleeve — sector guardrails",
+    "note": "Uniform across all six profiles",
+    "rows": [
+      { "sector": "AI Infrastructure / Software", "color": "#00bcd4", "values": ["5–15%", "5–15%", "5–15%", "5–15%", "5–15%", "5–15%"] },
+      { "sector": "AI Hardware",                  "color": "#0088a0", "values": ["10–20%", "10–20%", "10–20%", "10–20%", "10–20%", "10–20%"] },
+      { "sector": "Disruptive Tech and Quantum",  "color": "#28c868", "values": ["5–10%", "5–10%", "5–10%", "5–10%", "5–10%", "5–10%"] },
+      { "sector": "Physical AI",                  "color": "#70f0a0", "values": ["5–10%", "5–10%", "5–10%", "5–10%", "5–10%", "5–10%"] },
+      { "sector": "Cybersecurity",                "color": "#1860c0", "values": ["3–7%", "3–7%", "3–7%", "3–7%", "3–7%", "3–7%"] },
+      { "sector": "Aerospace / Defense",          "color": "#48a8e8", "values": ["5–10%", "5–10%", "5–10%", "5–10%", "5–10%", "5–10%"] },
+      { "sector": "Energy",                       "color": "#78909c", "values": ["10–15%", "10–15%", "10–15%", "10–15%", "10–15%", "10–15%"] },
+      { "sector": "Industrials",                  "color": "#c084fc", "values": ["5–10%", "5–10%", "5–10%", "5–10%", "5–10%", "5–10%"] }
+    ]
+  },
+  "sectorTagVocabulary": [
+    "Broad Based", "Gold & Commodities", "Crypto", "Passive Income",
+    "AI Infrastructure / Software", "AI Hardware", "Disruptive Tech and Quantum",
+    "Physical AI", "Cybersecurity", "Aerospace / Defense", "Energy", "Industrials"
+  ]
+}

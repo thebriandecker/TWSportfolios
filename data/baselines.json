@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "frozen": "2026-07-07",
+    "source": "Brian, from live site YTD as of release day",
+    "mechanics": "Displayed YTD = frozen baseline + weighted return of NEW primary tickers since anchor closes. Anchor = official closes of 2026-07-06 (Mon). Live tracking = primary ticker (Row 1) only; Ticker Option (Row 2) is display-only.",
+    "example": "High Conviction baseline 48.45%; if new holdings gain 1% over 30 days, site shows 49.45% YTD."
+  },
+  "baselines": {
+    "defensiveGrowth": 39.08,
+    "aggressiveGrowth": 39.76,
+    "highConviction": 48.45
+  },
+  "anchorDate": "2026-07-06",
+  "benchmarks": {
+    "note": "SPY / QQQ rows keep true Jan-2 YTD math (no baseline offset) — External check: confirm with Brian whether benchmarks should also show plain YTD or be re-anchored.",
+    "tickers": ["SPY", "QQQ"]
+  }
+}
