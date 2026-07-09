@@ -41,7 +41,7 @@ const CHANGES = {
     { l: 1, old: { t: "SMH", opt: "AIQ", w: 3 },   nw: { t: "SMH", opt: "AIQ", w: 3 },   status: "kept" },
     { l: 1, old: { t: "NLR", opt: "NUKZ", w: 4 },  nw: { t: "AIRR", opt: "VOLT", w: 3 }, status: "swap" },
     { l: 1, old: { t: "SHLD", opt: "DRNZ", w: 3 }, nw: { t: "IGV", opt: "SHLD", w: 3 },  status: "swap" },
-    { l: 1, old: { t: "CIBR", opt: "ROBT", w: 3 }, nw: { t: "ROBT", opt: "COPX", w: 3 }, status: "swap" },
+    { l: 1, old: { t: "CIBR", opt: "ROBT", w: 3 }, nw: { t: "CIBR", opt: "ROBT", w: 3 }, status: "kept" },
     { l: 1, old: { t: "DRAM", opt: "TCAI", w: 3 }, nw: { t: "DRAM", opt: "TCAI", w: 3 }, status: "kept" },
     { l: 1, old: { t: "COPX", opt: "SLV", w: 3 },  nw: { t: "COPX", opt: "REMX", w: 4 }, status: "kept" },
     { l: 1, old: null,                             nw: { t: "EUV", opt: "VOLT", w: 2 },  status: "add" },

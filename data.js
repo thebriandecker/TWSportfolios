@@ -157,7 +157,7 @@ const PORTFOLIOS = {
         { t: "SMH",  opt: "AIQ",       sec: "ah",     secOpt: "ai",     w: 3 },
         { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "energy", w: 3 },
         { t: "IGV",  opt: "SHLD",      sec: "ai",     secOpt: "aero",   w: 3 },
-        { t: "ROBT", opt: "COPX",      sec: "phys",   secOpt: "gold",   w: 3 },
+        { t: "CIBR", opt: "ROBT",      sec: "cyber",  secOpt: "phys",   w: 3 },
         { t: "DRAM", opt: "TCAI",      sec: "ah",     secOpt: "ah",     w: 3 },
         { t: "COPX", opt: "REMX",      sec: "ind",    secOpt: "ind",    w: 4 },
         { t: "EUV",  opt: "VOLT",      sec: "ah",     secOpt: "energy", w: 2 }
