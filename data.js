@@ -85,7 +85,7 @@ const PORTFOLIOS = {
         { t: "OUST", opt: "AAOI",      sec: "phys",   secOpt: "ah",     w: 2 },
         { t: "FLNC", opt: "FCEL",      sec: "energy", secOpt: "energy", w: 1 },
         { t: "TEM",  opt: "VEEV",      sec: "dtq",    secOpt: "dtq",    w: 2 },
-        { t: "INDI", opt: "INOD",      sec: "phys",   secOpt: "ai",     w: 2 }
+        { t: "INDI", opt: "INOD",      sec: "phys",   secOpt: "phys",   w: 2 }
       ]}
     ]
   },
