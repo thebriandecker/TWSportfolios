@@ -132,45 +132,9 @@ function renderPortfolio(pid) {
     <div class="perf-note">Performance tracks the primary ticker of each position only. Ticker Options are shown for illustration and do not affect performance. Benchmark YTD is unadjusted. Educational purposes only — not financial advice.</div>`;
   right.appendChild(perf);
 
-  const donut = el("div", "panel-card");
-  donut.innerHTML = `<span class="panel-title">Sector Exposure — Primary Sector by Position</span>
-    <div class="donut-wrap"><div class="donut-svg" id="${pid}_donut"></div>
-    <div class="donut-legend" id="${pid}_legend"></div></div>`;
-  right.appendChild(donut);
-
   grid.appendChild(left);
   grid.appendChild(right);
   root.appendChild(grid);
-  renderDonut(pid);
-}
-
-function renderDonut(pid) {
-  const p = PORTFOLIOS[pid];
-  const totals = {};
-  p.layers.forEach((l) => l.positions.forEach((pos) => {
-    totals[pos.sec] = (totals[pos.sec] || 0) + pos.w;
-  }));
-  const entries = Object.entries(totals).sort((a, b) => b[1] - a[1]);
-  const sum = entries.reduce((a, [, v]) => a + v, 0);
-  const R = 62, STROKE = 21, C = 2 * Math.PI * R, CX = 82;
-  let offset = 0;
-  const segs = entries.map(([k, v]) => {
-    const frac = v / sum;
-    const seg = `<circle r="${R}" cx="${CX}" cy="${CX}" fill="none"
-      stroke="${SECTORS[k].color}" stroke-width="${STROKE}"
-      stroke-dasharray="${(frac * C).toFixed(2)} ${C.toFixed(2)}"
-      stroke-dashoffset="${(-offset * C).toFixed(2)}"
-      transform="rotate(-90 ${CX} ${CX})"/>`;
-    offset += frac;
-    return seg;
-  }).join("");
-  $(pid + "_donut").innerHTML =
-    `<svg width="164" height="164" viewBox="0 0 164 164">${segs}
-     <text x="${CX}" y="78" text-anchor="middle" fill="#f0ece4" font-family="DM Mono,monospace" font-size="22" font-weight="700">${sum}%</text>
-     <text x="${CX}" y="98" text-anchor="middle" fill="#f0b429" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">ALLOCATED</text></svg>`;
-  $(pid + "_legend").innerHTML = entries.map(([k, v]) =>
-    `<div class="dl-row"><span class="sq" style="background:${SECTORS[k].color}"></span>
-     <span class="nm">${SECTORS[k].label}</span><span class="pc">${v}%</span></div>`).join("");
 }
 
 /* ── CHANGES tab ── */

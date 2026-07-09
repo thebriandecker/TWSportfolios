@@ -67,12 +67,12 @@ const PORTFOLIOS = {
       { name: "Core Stocks", alloc: 35, positions: [
         { t: "IGV",  opt: "MELI",      sec: "ai",     secOpt: "ai",     w: 4 },
         { t: "MU",   opt: "SKHY",      sec: "ah",     secOpt: "ah",     w: 4 },
-        { t: "PLTR", opt: "IGV",       sec: "ai",     secOpt: "ai",     w: 4 },
+        { t: "PLTR", opt: "IGV",       sec: "ai",     secOpt: "ai",     w: 3 },
         { t: "MRVL", opt: "ARM",       sec: "ah",     secOpt: "ah",     w: 4 },
         { t: "LNG",  opt: "WMB",       sec: "energy", secOpt: "energy", w: 2 },
         { t: "MSFT", opt: "HOOD",      sec: "ai",     secOpt: "dtq",    w: 3 },
         { t: "ETN",  opt: "VST",       sec: "ind",    secOpt: "energy", w: 2 },
-        { t: "VPG",  opt: "TSLA",      sec: "phys",   secOpt: "phys",   w: 3 },
+        { t: "VPG",  opt: "TSLA",      sec: "phys",   secOpt: "phys",   w: 4 },
         { t: "RBRK", opt: "MDB",       sec: "cyber",  secOpt: "ai",     w: 3 },
         { t: "NOW",  opt: "HOOD",      sec: "ai",     secOpt: "dtq",    w: 2 },
         { t: "HIMS", opt: "LLY",       sec: "dtq",    secOpt: "dtq",    w: 2 },
@@ -81,11 +81,11 @@ const PORTFOLIOS = {
       { name: "Asymmetric Bets", alloc: 16, positions: [
         { t: "RKLB", opt: "ASTS",      sec: "aero",   secOpt: "aero",   secNote: "Space", w: 4 },
         { t: "NBIS", opt: "IREN/CRWV", sec: "ai",     secOpt: "ai",     w: 3 },
-        { t: "BE",   opt: "FLNC",      sec: "energy", secOpt: "energy", w: 2 },
-        { t: "AAOI", opt: "COHR",      sec: "ah",     secOpt: "ah",     w: 2 },
+        { t: "BWEN", opt: "BE/FLNC",   sec: "energy", secOpt: "energy", w: 2 },
+        { t: "OUST", opt: "AAOI",      sec: "phys",   secOpt: "ah",     w: 2 },
         { t: "FLNC", opt: "FCEL",      sec: "energy", secOpt: "energy", w: 1 },
         { t: "TEM",  opt: "VEEV",      sec: "dtq",    secOpt: "dtq",    w: 2 },
-        { t: "ZETA", opt: "INDI",      sec: "dtq",    secOpt: "phys",   w: 2 }
+        { t: "INDI", opt: "INOD",      sec: "phys",   secOpt: "ai",     w: 2 }
       ]}
     ]
   },
@@ -106,16 +106,16 @@ const PORTFOLIOS = {
         { t: "VOO",  opt: "QQQM",      sec: "broad",  secOpt: null,     w: 4 },
         { t: "SCHD", opt: "VYM",       sec: "income", secOpt: null,     w: 6 }
       ]},
-      { name: "Thematic ETFs", alloc: 24, positions: [
+      { name: "Thematic ETFs", alloc: 23, positions: [
         { t: "AIPO", opt: "POWR",      sec: "energy", secOpt: "ah",     secNote: "Energy / AI HW", w: 4 },
         { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "energy", w: 3 },
         { t: "SHLD", opt: "IGV",       sec: "aero",   secOpt: "ai",     w: 4 },
         { t: "IGV",  opt: "ROBT",      sec: "ai",     secOpt: "phys",   w: 3 },
         { t: "DRAM", opt: "TCAI",      sec: "ah",     secOpt: "ah",     w: 4 },
-        { t: "COPX", opt: "REMX",      sec: "ind",    secOpt: "ind",    w: 4 },
+        { t: "COPX", opt: "REMX",      sec: "ind",    secOpt: "ind",    w: 3 },
         { t: "EUV",  opt: "VOLT",      sec: "ah",     secOpt: "energy", w: 2 }
       ]},
-      { name: "Core Stocks", alloc: 26, positions: [
+      { name: "Core Stocks", alloc: 29, positions: [
         { t: "MU",   opt: "SKHY",      sec: "ah",     secOpt: "ah",     w: 4 },
         { t: "MSFT", opt: "NVDA",      sec: "ai",     secOpt: "ah",     w: 3 },
         { t: "MRVL", opt: "GLW",       sec: "ah",     secOpt: "ah",     w: 3 },
@@ -124,14 +124,14 @@ const PORTFOLIOS = {
         { t: "PLTR", opt: "TSLA",      sec: "ai",     secOpt: "phys",   w: 3 },
         { t: "ETN",  opt: "VST",       sec: "ind",    secOpt: "energy", w: 3 },
         { t: "LLY",  opt: "HIMS",      sec: "dtq",    secOpt: "dtq",    w: 2 },
-        { t: "RBRK", opt: "MDB",       sec: "cyber",  secOpt: "ai",     w: 2 }
-      ]},
-      { name: "Asymmetric Bets", alloc: 12, positions: [
-        { t: "RKLB", opt: "ASTS",      sec: "aero",   secOpt: "aero",   secNote: "Space", w: 3 },
-        { t: "NBIS", opt: "IREN/CRWV", sec: "ai",     secOpt: "ai",     w: 3 },
-        { t: "VPG",  opt: "PENG",      sec: "phys",   secOpt: "ai",     w: 2 },
-        { t: "BE",   opt: "FLNC/FCEL", sec: "energy", secOpt: "energy", w: 2 },
+        { t: "RBRK", opt: "MDB",       sec: "cyber",  secOpt: "ai",     w: 3 },
         { t: "HOOD", opt: "ZETA",      sec: "dtq",    secOpt: "dtq",    w: 2 }
+      ]},
+      { name: "Asymmetric Bets", alloc: 10, positions: [
+        { t: "RKLB", opt: "ASTS",      sec: "aero",   secOpt: "aero",   secNote: "Space", w: 3 },
+        { t: "NBIS", opt: "IREN/CRWV", sec: "ai",     secOpt: "ai",     w: 2 },
+        { t: "VPG",  opt: "PENG",      sec: "phys",   secOpt: "ai",     w: 3 },
+        { t: "BE",   opt: "FLNC/FCEL", sec: "energy", secOpt: "energy", w: 2 }
       ]}
     ]
   },
@@ -179,7 +179,7 @@ const PORTFOLIOS = {
         { t: "NBIS", opt: "IREN/CRWV", sec: "ai",     secOpt: "ai",     w: 3 },
         { t: "PENG", opt: "OUST",      sec: "ai",     secOpt: "phys",   w: 2 },
         { t: "BE",   opt: "FLNC/FCEL", sec: "energy", secOpt: "energy", w: 2 },
-        { t: "HOOD", opt: "ZETA",      sec: "dtq",    secOpt: "dtq",    w: 2 }
+        { t: "HOOD", opt: "INOD",      sec: "dtq",    secOpt: "ai",     w: 2 }
       ]}
     ]
   }

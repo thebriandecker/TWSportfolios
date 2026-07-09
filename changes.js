@@ -13,7 +13,7 @@ const CHANGES = {
     { l: 1, old: { t: "SHLD", opt: "DRNZ", w: 5 }, nw: { t: "SHLD", opt: "IGV", w: 4 },  status: "kept" },
     { l: 1, old: { t: "CIBR", opt: "ROBT", w: 2 }, nw: { t: "IGV", opt: "ROBT", w: 3 },  status: "swap" },
     { l: 1, old: { t: "DRAM", opt: "SMH", w: 3 },  nw: { t: "DRAM", opt: "TCAI", w: 4 }, status: "kept" },
-    { l: 1, old: { t: "SLV", opt: "COPX", w: 4 },  nw: { t: "COPX", opt: "REMX", w: 4 }, status: "swap" },
+    { l: 1, old: { t: "SLV", opt: "COPX", w: 4 },  nw: { t: "COPX", opt: "REMX", w: 3 }, status: "swap" },
     { l: 1, old: { t: "TCAI", opt: "AIQ", w: 3 },  nw: { t: "EUV", opt: "VOLT", w: 2 },  status: "swap" },
     { l: 2, old: { t: "MU", opt: "GLW", w: 4 },    nw: { t: "MU", opt: "SKHY", w: 4 },   status: "kept" },
     { l: 2, old: { t: "AMZN", opt: "GOOG", w: 3 }, nw: { t: "MSFT", opt: "NVDA", w: 3 }, status: "swap" },
@@ -23,12 +23,12 @@ const CHANGES = {
     { l: 2, old: { t: "PLTR", opt: "TSLA", w: 3 }, nw: { t: "PLTR", opt: "TSLA", w: 3 }, status: "kept" },
     { l: 2, old: { t: "ETN", opt: "VST", w: 3 },   nw: { t: "ETN", opt: "VST", w: 3 },   status: "kept" },
     { l: 2, old: { t: "LLY", opt: "HIMS", w: 3 },  nw: { t: "LLY", opt: "HIMS", w: 2 },  status: "kept" },
-    { l: 2, old: null,                             nw: { t: "RBRK", opt: "MDB", w: 2 },  status: "add" },
+    { l: 2, old: null,                             nw: { t: "RBRK", opt: "MDB", w: 3 },  status: "add" },
     { l: 3, old: { t: "RKLB", opt: "ASTS", w: 3 }, nw: { t: "RKLB", opt: "ASTS", w: 3 }, status: "kept" },
-    { l: 3, old: { t: "NBIS", opt: "IREN", w: 3 }, nw: { t: "NBIS", opt: "IREN/CRWV", w: 3 }, status: "kept" },
-    { l: 3, old: { t: "VPG", opt: "ONDS", w: 2 },  nw: { t: "VPG", opt: "PENG", w: 2 },  status: "kept" },
+    { l: 3, old: { t: "NBIS", opt: "IREN", w: 3 }, nw: { t: "NBIS", opt: "IREN/CRWV", w: 2 }, status: "kept" },
+    { l: 3, old: { t: "VPG", opt: "ONDS", w: 2 },  nw: { t: "VPG", opt: "PENG", w: 3 },  status: "kept" },
     { l: 3, old: { t: "BE", opt: "FLNC", w: 2 },   nw: { t: "BE", opt: "FLNC/FCEL", w: 2 }, status: "kept" },
-    { l: 3, old: null,                             nw: { t: "HOOD", opt: "ZETA", w: 2 }, status: "add" }
+    { l: 2, old: null,                             nw: { t: "HOOD", opt: "ZETA", w: 2 }, status: "add" }
   ],
   agg: [
     { l: 0, old: { t: "VTI", opt: "SCHB", w: 8 },  nw: { t: "VTI", opt: "SCHB", w: 7 },  status: "kept" },
@@ -59,7 +59,7 @@ const CHANGES = {
     { l: 3, old: { t: "NBIS", opt: "IREN", w: 3 }, nw: { t: "NBIS", opt: "IREN/CRWV", w: 3 }, status: "kept" },
     { l: 3, old: { t: "HIMS", opt: "OUST", w: 2 }, nw: { t: "PENG", opt: "OUST", w: 2 }, status: "swap" },
     { l: 3, old: { t: "BE", opt: "FLNC", w: 2 },   nw: { t: "BE", opt: "FLNC/FCEL", w: 2 }, status: "kept" },
-    { l: 3, old: { t: "AAOI", opt: "COHR", w: 2 }, nw: { t: "HOOD", opt: "ZETA", w: 2 }, status: "swap" }
+    { l: 3, old: { t: "AAOI", opt: "COHR", w: 2 }, nw: { t: "HOOD", opt: "INOD", w: 2 }, status: "swap" }
   ],
   hc: [
     { l: 0, old: { t: "VTI", opt: "SCHB", w: 7 },  nw: { t: "VTI", opt: "SCHB", w: 7 },  status: "kept" },
@@ -76,22 +76,22 @@ const CHANGES = {
     { l: 1, old: null,                             nw: { t: "EUV", opt: "VOLT", w: 2 },  status: "add" },
     { l: 2, old: { t: "AMD", opt: "AVGO", w: 5 },  nw: { t: "IGV", opt: "MELI", w: 4 },  status: "swap" },
     { l: 2, old: { t: "MU", opt: "GLW", w: 4 },    nw: { t: "MU", opt: "SKHY", w: 4 },   status: "kept" },
-    { l: 2, old: { t: "PLTR", opt: "INTC", w: 4 }, nw: { t: "PLTR", opt: "IGV", w: 4 },  status: "kept" },
+    { l: 2, old: { t: "PLTR", opt: "INTC", w: 4 }, nw: { t: "PLTR", opt: "IGV", w: 3 },  status: "kept" },
     { l: 2, old: { t: "MRVL", opt: "ARM", w: 4 },  nw: { t: "MRVL", opt: "ARM", w: 4 },  status: "kept" },
     { l: 2, old: { t: "VST", opt: "ETN", w: 3 },   nw: { t: "LNG", opt: "WMB", w: 2 },   status: "swap" },
     { l: 2, old: { t: "AMZN", opt: "GOOG", w: 4 }, nw: { t: "MSFT", opt: "HOOD", w: 3 }, status: "swap" },
     { l: 2, old: { t: "MOD", opt: "BWXT", w: 3 },  nw: { t: "ETN", opt: "VST", w: 2 },   status: "swap" },
-    { l: 2, old: { t: "TSLA", opt: "VPG", w: 4 },  nw: { t: "VPG", opt: "TSLA", w: 3 },  status: "kept" },
+    { l: 2, old: { t: "TSLA", opt: "VPG", w: 4 },  nw: { t: "VPG", opt: "TSLA", w: 4 },  status: "kept" },
     { l: 2, old: { t: "TER", opt: "—", w: 2 },     nw: { t: "RBRK", opt: "MDB", w: 3 },  status: "swap" },
     { l: 2, old: { t: "NOW", opt: "HOOD", w: 3 },  nw: { t: "NOW", opt: "HOOD", w: 2 },  status: "kept" },
     { l: 2, old: { t: "LLY", opt: "HIMS", w: 2 },  nw: { t: "HIMS", opt: "LLY", w: 2 },  status: "kept" },
     { l: 2, old: null,                             nw: { t: "IBM", opt: "DELL", w: 2 },  status: "add" },
     { l: 3, old: { t: "RKLB", opt: "ASTS", w: 4 }, nw: { t: "RKLB", opt: "ASTS", w: 4 }, status: "kept" },
     { l: 3, old: { t: "NBIS", opt: "MOD", w: 3 },  nw: { t: "NBIS", opt: "IREN/CRWV", w: 3 }, status: "kept" },
-    { l: 3, old: { t: "BE", opt: "FLNC", w: 2 },   nw: { t: "BE", opt: "FLNC", w: 2 },   status: "kept" },
-    { l: 3, old: { t: "AAOI", opt: "COHR", w: 3 }, nw: { t: "AAOI", opt: "COHR", w: 2 }, status: "kept" },
+    { l: 3, old: { t: "BE", opt: "FLNC", w: 2 },   nw: { t: "BWEN", opt: "BE/FLNC", w: 2 }, status: "swap" },
+    { l: 3, old: { t: "AAOI", opt: "COHR", w: 3 }, nw: { t: "OUST", opt: "AAOI", w: 2 }, status: "swap" },
     { l: 3, old: { t: "OKLO", opt: "IONQ", w: 1 }, nw: { t: "FLNC", opt: "FCEL", w: 1 }, status: "swap" },
     { l: 3, old: { t: "ASTS", opt: "LUNR", w: 1 }, nw: { t: "TEM", opt: "VEEV", w: 2 },  status: "swap" },
-    { l: 3, old: null,                             nw: { t: "ZETA", opt: "INDI", w: 2 }, status: "add" }
+    { l: 3, old: null,                             nw: { t: "INDI", opt: "INOD", w: 2 }, status: "add" }
   ]
 };
