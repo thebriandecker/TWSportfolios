@@ -89,7 +89,7 @@ const CHANGES = {
     { l: 3, old: { t: "RKLB", opt: "ASTS", w: 4 }, nw: { t: "RKLB", opt: "ASTS", w: 4 }, status: "kept" },
     { l: 3, old: { t: "NBIS", opt: "MOD", w: 3 },  nw: { t: "NBIS", opt: "IREN/CRWV", w: 3 }, status: "kept" },
     { l: 3, old: { t: "BE", opt: "FLNC", w: 2 },   nw: { t: "BWEN", opt: "BE/FLNC", w: 2 }, status: "swap" },
-    { l: 3, old: { t: "AAOI", opt: "COHR", w: 3 }, nw: { t: "OUST", opt: "AAOI", w: 2 }, status: "swap" },
+    { l: 3, old: { t: "AAOI", opt: "COHR", w: 3 }, nw: { t: "PENG", opt: "OUST", w: 2 }, status: "swap" },
     { l: 3, old: { t: "OKLO", opt: "IONQ", w: 1 }, nw: { t: "FLNC", opt: "FCEL", w: 1 }, status: "swap" },
     { l: 3, old: { t: "ASTS", opt: "LUNR", w: 1 }, nw: { t: "TEM", opt: "VEEV", w: 2 },  status: "swap" },
     { l: 3, old: null,                             nw: { t: "INDI", opt: "INOD", w: 2 }, status: "add" }

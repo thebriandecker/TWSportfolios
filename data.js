@@ -82,7 +82,7 @@ const PORTFOLIOS = {
         { t: "RKLB", opt: "ASTS",      sec: "aero",   secOpt: "aero",   secNote: "Space", w: 4 },
         { t: "NBIS", opt: "IREN/CRWV", sec: "ai",     secOpt: "ai",     w: 3 },
         { t: "BWEN", opt: "BE/FLNC",   sec: "energy", secOpt: "energy", w: 2 },
-        { t: "OUST", opt: "AAOI",      sec: "phys",   secOpt: "ah",     w: 2 },
+        { t: "PENG", opt: "OUST",      sec: "ai",     secOpt: "phys",   w: 2 },
         { t: "FLNC", opt: "FCEL",      sec: "energy", secOpt: "energy", w: 1 },
         { t: "TEM",  opt: "VEEV",      sec: "dtq",    secOpt: "dtq",    w: 2 },
         { t: "INDI", opt: "INOD",      sec: "phys",   secOpt: "phys",   w: 2 }
