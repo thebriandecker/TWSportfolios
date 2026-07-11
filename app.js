@@ -67,9 +67,10 @@ function renderPortfolio(pid) {
       <span class="ph">Ticker</span>
       <span class="ph">Option</span>
       <span class="ph">Sector</span>
+      <span class="ph ph-r">1W %</span>
       <span class="ph ph-r">Allocation</span>`));
 
-    layer.positions.forEach((pos) => {
+    layer.positions.forEach((pos, pi) => {
       const row = el("div", "pos-row");
       row.innerHTML = `
         <span class="pos-bar" style="background:${SECTORS[pos.sec].color}"></span>
@@ -79,6 +80,7 @@ function renderPortfolio(pid) {
           ${secChip(pos.sec, false, pos.secNote)}
           ${pos.secOpt && pos.secOpt !== pos.sec ? secChip(pos.secOpt, true) : ""}
         </span>
+        <span class="pos-1w" id="w1_${pid}_${li}_${pi}">—</span>
         <span class="pos-alloc-wrap">
           <span class="wbar"><span class="wfill" style="width:${(pos.w / maxW) * 100}%;background:${SECTORS[pos.sec].color}"></span></span>
           <span class="pos-alloc">${pos.w}%</span>
@@ -377,6 +379,17 @@ async function refreshAll() {
       hero.innerHTML = (displayed >= 0 ? "+" : "−") + Math.abs(displayed).toFixed(2) + "%";
       hero.style.color = displayed >= 0 ? "#34d97b" : "#ff5c5c";
       hero.style.textShadow = displayed >= 0 ? "0 0 34px rgba(52,217,123,0.35)" : "0 0 34px rgba(255,92,92,0.35)";
+    }
+    /* per-position 1-week performance (primary ticker only) */
+    const d7 = dateNDaysAgo(7);
+    for (let li = 0; li < p.layers.length; li++) {
+      const poss = p.layers[li].positions;
+      for (let pi = 0; pi < poss.length; pi++) {
+        const cell = $(`w1_${pid}_${li}_${pi}`);
+        if (!cell) continue;
+        const [cur, prev] = await Promise.all([fetchLatest(poss[pi].t), fetchCloseOn(poss[pi].t, d7)]);
+        if (cur && prev) cell.innerHTML = fmtPct(((cur - prev) / prev) * 100, 1);
+      }
     }
     const ts = $(`${pid}_ts`);
     if (ts) ts.textContent = "Updated " + new Date().toLocaleTimeString() + (isMarketOpen() ? " · Market Open" : " · Market Closed");

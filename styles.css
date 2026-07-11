@@ -183,7 +183,7 @@ body {
 }
 .pos-row {
   display: grid;
-  grid-template-columns: 4px 104px 118px 1fr 210px;
+  grid-template-columns: 4px 104px 118px 1fr 84px 196px;
   align-items: center; gap: 14px;
   padding: 12px 16px 12px 0;
   border-bottom: 1px solid var(--line-soft);
@@ -220,7 +220,7 @@ body {
 .wfill { display: block; height: 100%; border-radius: 3px; box-shadow: 0 0 8px currentColor; }
 .pos-alloc { font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--teal); width: 46px; text-align: right; }
 @media (max-width: 760px) {
-  .pos-row { grid-template-columns: 4px 92px 1fr 100px; }
+  .pos-row { grid-template-columns: 4px 84px 1fr 72px 92px; }
   .pos-secs, .pos-header .ph:nth-child(4) { display: none; }
   .wbar { display: none; }
 }
@@ -453,3 +453,5 @@ body {
 .entry-note strong { color: var(--cream); font-weight: 700; }
 .entry-note a { color: var(--gold); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .entry-note a:hover { color: var(--cream); }
+
+.pos-1w { font-family: var(--mono); font-size: 15px; font-weight: 600; text-align: right; padding-right: 4px; }
