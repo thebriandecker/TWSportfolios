@@ -57,12 +57,12 @@ const PORTFOLIOS = {
       ]},
       { name: "Thematic ETFs", alloc: 21, positions: [
         { t: "AIPO", opt: "POWR",      sec: "energy", secOpt: "ah",     secNote: "Energy / AI HW", w: 3 },
-        { t: "SMH",  opt: "AIQ",       sec: "ah",     secOpt: "ai",     w: 3 },
-        { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "energy", w: 3 },
+        { t: "SMH",  opt: "SOXX",      sec: "ah",     secOpt: "ah",     w: 3 },
+        { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "ind",    w: 3 },
         { t: "TCAI", opt: "ROBT",      sec: "ah",     secOpt: "phys",   secNote: "AI HW / Infra", w: 3 },
         { t: "DRAM", opt: "CIBR",      sec: "ah",     secOpt: "cyber",  w: 3 },
         { t: "REMX", opt: "SLV",       sec: "ind",    secOpt: "ind",    w: 4 },
-        { t: "EUV",  opt: "VOLT",      sec: "ah",     secOpt: "energy", w: 2 }
+        { t: "EUV",  opt: "WGMI",      sec: "ah",     secOpt: "ai",     w: 2 }
       ]},
       { name: "Core Stocks", alloc: 35, positions: [
         { t: "IGV",  opt: "MELI",      sec: "ai",     secOpt: "ai",     w: 4 },
@@ -76,7 +76,7 @@ const PORTFOLIOS = {
         { t: "RBRK", opt: "MDB",       sec: "cyber",  secOpt: "ai",     w: 3 },
         { t: "NOW",  opt: "HOOD",      sec: "ai",     secOpt: "dtq",    w: 2 },
         { t: "HIMS", opt: "LLY",       sec: "dtq",    secOpt: "dtq",    w: 2 },
-        { t: "IBM",  opt: "DELL",      sec: "dtq",    secOpt: "ah",     secNote: "Quantum / AI HW / AI", w: 2 }
+        { t: "DELL", opt: "IBM",       sec: "ah",     secOpt: "dtq",    secNote: "AI HW / Quantum", w: 2 }
       ]},
       { name: "Asymmetric Bets", alloc: 16, positions: [
         { t: "RKLB", opt: "ASTS",      sec: "aero",   secOpt: "aero",   secNote: "Space", w: 4 },
@@ -108,12 +108,12 @@ const PORTFOLIOS = {
       ]},
       { name: "Thematic ETFs", alloc: 23, positions: [
         { t: "AIPO", opt: "POWR",      sec: "energy", secOpt: "ah",     secNote: "Energy / AI HW", w: 4 },
-        { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "energy", w: 3 },
-        { t: "SHLD", opt: "IGV",       sec: "aero",   secOpt: "ai",     w: 4 },
+        { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "ind",    w: 3 },
+        { t: "SHLD", opt: "XLI",       sec: "aero",   secOpt: "ind",    w: 4 },
         { t: "IGV",  opt: "ROBT",      sec: "ai",     secOpt: "phys",   w: 3 },
         { t: "DRAM", opt: "TCAI",      sec: "ah",     secOpt: "ah",     w: 4 },
         { t: "COPX", opt: "REMX",      sec: "ind",    secOpt: "ind",    w: 3 },
-        { t: "EUV",  opt: "VOLT",      sec: "ah",     secOpt: "energy", w: 2 }
+        { t: "EUV",  opt: "SOXX",      sec: "ah",     secOpt: "ah",     w: 2 }
       ]},
       { name: "Core Stocks", alloc: 29, positions: [
         { t: "MU",   opt: "SKHY",      sec: "ah",     secOpt: "ah",     w: 4 },
@@ -155,12 +155,12 @@ const PORTFOLIOS = {
       { name: "Thematic ETFs", alloc: 24, positions: [
         { t: "AIPO", opt: "POWR",      sec: "energy", secOpt: "ah",     secNote: "Energy / AI HW", w: 3 },
         { t: "SMH",  opt: "AIQ",       sec: "ah",     secOpt: "ai",     w: 3 },
-        { t: "AIRR", opt: "VOLT",      sec: "energy", secOpt: "energy", w: 3 },
-        { t: "IGV",  opt: "SHLD",      sec: "ai",     secOpt: "aero",   w: 3 },
-        { t: "CIBR", opt: "ROBT",      sec: "cyber",  secOpt: "phys",   w: 3 },
+        { t: "AIRR", opt: "XLI",       sec: "energy", secOpt: "ind",    w: 3 },
+        { t: "IGV",  opt: "CIBR",      sec: "ai",     secOpt: "cyber",  w: 3 },
+        { t: "ROBO", opt: "ROBT",      sec: "phys",   secOpt: "phys",   w: 3 },
         { t: "DRAM", opt: "TCAI",      sec: "ah",     secOpt: "ah",     w: 3 },
         { t: "COPX", opt: "REMX",      sec: "ind",    secOpt: "ind",    w: 4 },
-        { t: "EUV",  opt: "VOLT",      sec: "ah",     secOpt: "energy", w: 2 }
+        { t: "EUV",  opt: "TCAI",      sec: "ah",     secOpt: "ah",     w: 2 }
       ]},
       { name: "Core Stocks", alloc: 30, positions: [
         { t: "MU",   opt: "SKHY",      sec: "ah",     secOpt: "ah",     w: 4 },
@@ -263,13 +263,6 @@ const THEMATIC_ETFS = {
       { t: "LRCX", name: "Lam Research", w: 6.2 }, { t: "GLW", name: "Corning", w: 5.9 }, { t: "KLAC", name: "KLA", w: 5.5 },
       { t: "COHR", name: "Coherent", w: 3.6 }, { t: "LITE", name: "Lumentum", w: 3.4 }, { t: "MRVL", name: "Marvell", w: 3.3 }, { t: "CIEN", name: "Ciena", w: 3.2 }
     ]},
-  AIQ: { name: "Global X Artificial Intelligence & Technology ETF", category: "AI Hardware", asOf: "Jul 2, 2026",
-    blurb: "Broad, index-based AI exposure — ~85 companies across chips, memory, software, and big tech, including Korean names (SK hynix, Samsung) most US funds miss. The diversified \"whole AI stack.\" ~$10.5B · 0.68% ER.",
-    holdings: [
-      { t: "SK hynix", name: "(KRX 000660)", w: 7.0 }, { t: "MU", name: "Micron", w: 6.3 }, { t: "AMD", name: "AMD", w: 5.2 },
-      { t: "INTC", name: "Intel", w: 4.8 }, { t: "Samsung", name: "(KRX 005930)", w: 4.5 }, { t: "CSCO", name: "Cisco", w: 3.9 },
-      { t: "TSM", name: "Taiwan Semiconductor", w: 3.4 }, { t: "AAPL", name: "Apple", w: 3.2 }, { t: "AVGO", name: "Broadcom", w: 2.8 }, { t: "GOOGL", name: "Alphabet", w: 2.8 }
-    ]},
   TCAI: { name: "Tortoise AI Infrastructure ETF", category: "AI Hardware", asOf: "early Jul 2026",
     blurb: "Actively managed AI-infrastructure fund blending datacenter hardware (cooling, memory, storage, networking) with the power and grid contractors that feed it. ~$278M · 0.65% ER.",
     holdings: [
@@ -299,13 +292,6 @@ const THEMATIC_ETFS = {
       { t: "AMD", name: "AMD", w: 5.0 }, { t: "TSM", name: "TSMC", w: 5.0 }, { t: "MU", name: "Micron", w: 4.7 },
       { t: "NVDA", name: "NVIDIA", w: 4.7 }, { t: "AVGO", name: "Broadcom", w: 4.5 }, { t: "CRWV", name: "CoreWeave", w: 3.9 },
       { t: "MRVL", name: "Marvell", w: 3.8 }, { t: "NAVER", name: "(KRX 035420)", w: 3.2 }, { t: "SK hynix", name: "(KRX 000660)", w: 3.2 }, { t: "ORCL", name: "Oracle", w: 3.2 }
-    ]},
-  IVES: { name: "Dan IVES Wedbush AI Revolution ETF", category: "AI Infrastructure / Software", asOf: "Jul 8, 2026",
-    blurb: "Tracks ~30 AI leaders handpicked via Dan Ives's AI Report, float-adjusted with concentration caps — the mega-cap \"AI 30\" in one ticket. ~$1.1B · 0.75% ER.",
-    holdings: [
-      { t: "AAPL", name: "Apple", w: 5.2 }, { t: "TSM", name: "Taiwan Semiconductor", w: 5.0 }, { t: "AMD", name: "AMD", w: 4.8 },
-      { t: "META", name: "Meta", w: 4.8 }, { t: "AMZN", name: "Amazon", w: 4.8 }, { t: "GOOGL", name: "Alphabet", w: 4.7 },
-      { t: "TSLA", name: "Tesla", w: 4.7 }, { t: "MSFT", name: "Microsoft", w: 4.7 }, { t: "NVDA", name: "NVIDIA", w: 4.6 }, { t: "MU", name: "Micron", w: 4.6 }
     ]},
   UFOX: { name: "Defiance Connective Technologies ETF (formerly SIXG)", category: "AI Infrastructure / Software", asOf: "Jul 8, 2026",
     blurb: "~50 connectivity names across 5G/6G networking, expanded April 2026 to add satellite-communications and space-industry companies — the ticker changed from SIXG to UFOX with the update. ~$1B · 0.30% ER.",
@@ -344,13 +330,6 @@ const THEMATIC_ETFS = {
       { t: "PWR", name: "Quanta Services", w: 5.3 }, { t: "NEE", name: "NextEra Energy", w: 5.2 }, { t: "GEV", name: "GE Vernova", w: 4.7 },
       { t: "APH", name: "Amphenol", w: 4.6 }, { t: "AEP", name: "American Electric Power", w: 4.6 }, { t: "OGE", name: "OGE Energy", w: 4.4 }, { t: "IDA", name: "IDACORP", w: 4.0 }
     ]},
-  NLR: { name: "VanEck Uranium & Nuclear ETF", category: "Energy", asOf: "Jul 8, 2026",
-    blurb: "Market-cap-weighted index of the global nuclear value chain — uranium miners, reactor builders, and nuclear-heavy utilities in one wrapper. ~$4.6B · 0.52% ER.",
-    holdings: [
-      { t: "CCJ", name: "Cameco", w: 8.0 }, { t: "CEG", name: "Constellation Energy", w: 7.9 }, { t: "PEG", name: "PSEG", w: 7.0 },
-      { t: "BWXT", name: "BWX Technologies", w: 6.8 }, { t: "FORTUM", name: "Fortum", w: 5.6 }, { t: "LEU", name: "Centrus Energy", w: 5.2 },
-      { t: "OKLO", name: "Oklo", w: 5.2 }, { t: "NXE", name: "NexGen Energy", w: 5.1 }, { t: "DML", name: "Denison Mines", w: 5.0 }, { t: "UEC", name: "Uranium Energy", w: 4.9 }
-    ]},
   NUKZ: { name: "Range Nuclear Renaissance Index ETF", category: "Energy", asOf: "Jul 8, 2026",
     blurb: "Tracks the Nuclear Renaissance Index — tilted toward reactor construction, SMRs, fuel, and utilities restarting or expanding nuclear. More \"buildout\" flavored than NLR. ~$837M · 0.85% ER.",
     holdings: [
@@ -381,20 +360,8 @@ const THEMATIC_ETFS = {
       { t: "ANTO", name: "Antofagasta", w: 5.4 }, { t: "KGH", name: "KGHM", w: 5.3 }, { t: "FM", name: "First Quantum", w: 5.2 },
       { t: "SCCO", name: "Southern Copper", w: 4.9 }, { t: "BOL", name: "Boliden", w: 4.9 }, { t: "GLEN", name: "Glencore", w: 4.8 }, { t: "FCX", name: "Freeport-McMoRan", w: 4.8 }
     ]},
-  DBA: { name: "Invesco DB Agriculture Fund", category: "Industrials", asOf: "Jul 8, 2026",
-    blurb: "Futures-based commodity pool tracking ~10 agricultural commodity futures — grains, livestock, and softs — not stocks. Collateral sits in T-bills. A pure food/ag-commodity diversifier. ~$1.3B · 0.93% ER.",
-    holdings: [
-      { t: "COLLAT", name: "Money-market collateral", w: 40.5 }, { t: "SOYB", name: "Soybean futures", w: 6.7 }, { t: "CORN", name: "Corn futures", w: 6.6 },
-      { t: "CATTLE", name: "Live Cattle futures", w: 5.6 }, { t: "TBILL", name: "Short-Term Treasury ETF", w: 5.1 }, { t: "FDRCTL", name: "Feeder Cattle futures", w: 3.4 },
-      { t: "SOYOIL", name: "Soybean Oil futures", w: 3.3 }, { t: "WHEAT", name: "Wheat futures", w: 3.3 }, { t: "HOGS", name: "Lean Hogs futures", w: 3.2 }, { t: "SOFTS", name: "Sugar/Coffee/Cocoa/Cotton", w: 12.0 }
-    ]},
 
   /* ── GOLD & SILVER ── */
-  SLV: { name: "iShares Silver Trust", category: "Gold & Silver", asOf: "Jul 6, 2026",
-    blurb: "Not an equity fund — a grantor trust holding physical silver bullion in London vaults, tracking the silver spot price minus expenses. Direct silver exposure (monetary hedge + industrial/solar demand) with no company risk. ~$35B · 0.50% ER.",
-    holdings: [
-      { t: "SILVER", name: "Physical silver bullion (London vaults)", w: 100.0 }
-    ]},
 
   /* ── PHYSICAL AI ── */
   ROBT: { name: "First Trust Nasdaq Artificial Intelligence & Robotics ETF", category: "Physical AI", asOf: "Jul 5, 2026",
@@ -411,13 +378,6 @@ const THEMATIC_ETFS = {
       { t: "SPCX", name: "SpaceX (private)", w: 5.8 }, { t: "KTOS", name: "Kratos Defense", w: 5.2 }, { t: "GOOG", name: "Alphabet", w: 4.7 },
       { t: "DE", name: "Deere", w: 4.4 }, { t: "RKLB", name: "Rocket Lab", w: 4.1 }, { t: "PLTR", name: "Palantir", w: 3.6 }, { t: "TSM", name: "Taiwan Semiconductor", w: 3.4 }
     ]},
-  BOTT: { name: "Themes Humanoid Robotics ETF", category: "Physical AI", asOf: "late Jun 2026",
-    blurb: "The humanoid pure-play — ~30-43 names from the Solactive Global Humanoid Robotics Index, dominated by the China A-share actuator and automation supply chain plus Tesla. Small but the most direct humanoid basket. ~$60M · 0.35% ER.",
-    holdings: [
-      { t: "688017", name: "Leader Harmonious Drive", w: 8.7 }, { t: "688320", name: "Hechuan Technology", w: 5.7 }, { t: "688165", name: "EFORT", w: 5.4 },
-      { t: "002747", name: "Estun Automation", w: 5.1 }, { t: "TSLA", name: "Tesla", w: 4.9 }, { t: "MDA", name: "MDA Space", w: 4.9 },
-      { t: "603666", name: "Yijiahe", w: 4.8 }, { t: "NVDA", name: "NVIDIA", w: 4.6 }, { t: "688306", name: "Ningbo PIA", w: 4.5 }, { t: "RR", name: "Richtech Robotics", w: 4.3 }
-    ]},
 
   /* ── AEROSPACE / DEFENSE ── */
   SHLD: { name: "Global X Defense Tech ETF", category: "Aerospace / Defense", asOf: "Jul 2, 2026",
@@ -426,13 +386,6 @@ const THEMATIC_ETFS = {
       { t: "RTX", name: "RTX", w: 9.1 }, { t: "GD", name: "General Dynamics", w: 8.8 }, { t: "LMT", name: "Lockheed Martin", w: 8.3 },
       { t: "NOC", name: "Northrop Grumman", w: 8.0 }, { t: "PLTR", name: "Palantir", w: 7.7 }, { t: "BA.", name: "BAE Systems", w: 4.5 },
       { t: "LHX", name: "L3Harris", w: 4.4 }, { t: "RHM", name: "Rheinmetall", w: 4.1 }, { t: "HO", name: "Thales", w: 3.7 }, { t: "LDO", name: "Leonardo", w: 3.6 }
-    ]},
-  ARKX: { name: "ARK Space & Defense Innovation ETF", category: "Aerospace / Defense", asOf: "Jul 8, 2026",
-    blurb: "Actively managed ARK space + defense-tech fund — orbital launch, satellites, drones, and defense-adjacent tech, with pre-IPO SpaceX as the top holding. ~$1.4B · 0.75% ER.",
-    holdings: [
-      { t: "SPCX", name: "SpaceX (private)", w: 8.8 }, { t: "LHX", name: "L3Harris", w: 6.5 }, { t: "RKLB", name: "Rocket Lab", w: 6.5 },
-      { t: "DE", name: "Deere", w: 6.1 }, { t: "AMD", name: "AMD", w: 6.0 }, { t: "KTOS", name: "Kratos Defense", w: 5.5 },
-      { t: "TER", name: "Teradyne", w: 4.8 }, { t: "AVAV", name: "AeroVironment", w: 4.3 }, { t: "GOOG", name: "Alphabet", w: 3.9 }, { t: "AMZN", name: "Amazon", w: 3.9 }
     ]},
   UFO: { name: "Procure Space ETF", category: "Aerospace / Defense", asOf: "Jul 8, 2026",
     blurb: "The original pure-play space-economy index ETF — tier-weighted toward companies with majority space-derived revenue: satcom, ground equipment, and launch. ~$1.1B · 0.75% ER.",
@@ -448,13 +401,6 @@ const THEMATIC_ETFS = {
       { t: "ASTS", name: "AST SpaceMobile", w: 5.8 }, { t: "VSAT", name: "Viasat", w: 5.2 }, { t: "MDA", name: "MDA Space", w: 4.3 },
       { t: "VNP", name: "5N Plus", w: 4.2 }, { t: "FLY", name: "Firefly Aerospace", w: 4.0 }, { t: "LUNR", name: "Intuitive Machines", w: 4.0 }, { t: "FTC", name: "Filtronic", w: 3.6 }
     ]},
-  DRNZ: { name: "REX Drone ETF", category: "Aerospace / Defense", asOf: "Jul 8, 2026",
-    blurb: "First pure-play drone/UAV ETF (launched Oct 2025) — 80% weighted to drone pure-plays across defense and commercial platforms, counter-drone, and components. ~$111M · 0.65% ER.",
-    holdings: [
-      { t: "AVAV", name: "AeroVironment", w: 15.8 }, { t: "NXSN", name: "NextVision", w: 12.6 }, { t: "ONDS", name: "Ondas", w: 10.7 },
-      { t: "DRO", name: "DroneShield", w: 5.1 }, { t: "RCAT", name: "Red Cat", w: 4.9 }, { t: "ELS", name: "Elsight", w: 4.3 },
-      { t: "UMAC", name: "Unusual Machines", w: 4.2 }, { t: "AVEX", name: "AEVEX Aerospace", w: 3.7 }, { t: "EH", name: "EHang", w: 3.4 }
-    ]},
 
   /* ── DISRUPTIVE TECH & QUANTUM ── */
   QTUM: { name: "Defiance Quantum ETF", category: "Disruptive Tech & Quantum", asOf: "Jul 8, 2026",
@@ -463,13 +409,6 @@ const THEMATIC_ETFS = {
       { t: "HQ", name: "Horizon Quantum", w: 2.3 }, { t: "ARQQ", name: "Arqit Quantum", w: 2.0 }, { t: "QNT", name: "Quantinuum", w: 1.5 },
       { t: "3443", name: "Global Unichip", w: 1.5 }, { t: "ALAB", name: "Astera Labs", w: 1.4 }, { t: "AMAT", name: "Applied Materials", w: 1.4 },
       { t: "3661", name: "Alchip", w: 1.4 }, { t: "RDNT", name: "RadNet", w: 1.3 }, { t: "8035", name: "Tokyo Electron", w: 1.3 }, { t: "MKSI", name: "MKS Instruments", w: 1.3 }
-    ]},
-  ARKK: { name: "ARK Innovation ETF", category: "Disruptive Tech & Quantum", asOf: "Jul 8, 2026",
-    blurb: "Cathie Wood's flagship actively managed disruptive-innovation fund — genomics, fintech, AI, crypto platforms, and Tesla in concentrated high-conviction bets. ~$8.2B · 0.75% ER.",
-    holdings: [
-      { t: "TSLA", name: "Tesla", w: 10.3 }, { t: "TEM", name: "Tempus AI", w: 5.7 }, { t: "CRSP", name: "CRISPR Therapeutics", w: 5.3 },
-      { t: "HOOD", name: "Robinhood", w: 5.1 }, { t: "AMD", name: "AMD", w: 4.5 }, { t: "SHOP", name: "Shopify", w: 4.3 },
-      { t: "SPCX", name: "SpaceX (private)", w: 4.1 }, { t: "COIN", name: "Coinbase", w: 4.0 }, { t: "TWST", name: "Twist Bioscience", w: 3.5 }, { t: "RBLX", name: "Roblox", w: 3.4 }
     ]},
 
   /* ── CYBERSECURITY ── */
@@ -488,5 +427,41 @@ const THEMATIC_ETFS = {
       { t: "VALE", name: "Vale", w: 10.5 }, { t: "NU", name: "Nu Holdings", w: 9.5 }, { t: "ITUB", name: "Itaú Unibanco", w: 8.6 },
       { t: "PETR4", name: "Petrobras (pref)", w: 6.1 }, { t: "PETR3", name: "Petrobras (common)", w: 5.8 }, { t: "BBDC", name: "Bradesco", w: 3.7 },
       { t: "AXIA", name: "AXIA Energia", w: 3.4 }, { t: "WEGE", name: "WEG", w: 3.2 }, { t: "B3SA", name: "B3", w: 3.1 }, { t: "ABEV", name: "Ambev", w: 3.1 }
+    ]},
+
+  XLI: { name: "Industrial Select Sector SPDR Fund", category: "Industrials", asOf: "Jul 6, 2026",
+    blurb: "The big S&P 500 industrials sector fund — aerospace, machinery, rails, and electrical equipment at a rock-bottom fee. Broad industrial exposure without single-theme concentration. ~$31B · 0.08% ER.",
+    holdings: [
+      { t: "CAT", name: "Caterpillar", w: 7.8 }, { t: "GE", name: "GE Aerospace", w: 6.9 }, { t: "GEV", name: "GE Vernova", w: 5.2 },
+      { t: "RTX", name: "RTX", w: 4.7 }, { t: "BA", name: "Boeing", w: 3.1 }, { t: "UNP", name: "Union Pacific", w: 2.9 },
+      { t: "DE", name: "Deere", w: 2.7 }, { t: "ETN", name: "Eaton", w: 2.7 }, { t: "UBER", name: "Uber", w: 2.7 }, { t: "PH", name: "Parker Hannifin", w: 2.1 }
+    ]},
+  ROBO: { name: "ROBO Global Robotics & Automation Index ETF", category: "Physical AI", asOf: "Jul 9, 2026",
+    blurb: "The original robotics index fund — ~92 global robotics, automation, and AI-enabling companies across hardware, sensing, and software, deliberately near equal-weight so no single stock dominates. ~$2B · 0.95% ER.",
+    holdings: [
+      { t: "AMBA", name: "Ambarella", w: 1.9 }, { t: "ROK", name: "Rockwell Automation", w: 1.8 }, { t: "ILMN", name: "Illumina", w: 1.8 },
+      { t: "ISRG", name: "Intuitive Surgical", w: 1.8 }, { t: "6324", name: "Harmonic Drive", w: 1.7 }, { t: "NOVT", name: "Novanta", w: 1.7 },
+      { t: "IPGP", name: "IPG Photonics", w: 1.7 }, { t: "GEA", name: "GEA Group", w: 1.6 }, { t: "6273", name: "SMC Corp", w: 1.6 }, { t: "TER", name: "Teradyne", w: 1.6 }
+    ]},
+  HTEC: { name: "ROBO Global Healthcare Technology & Innovation ETF", category: "Disruptive Tech & Quantum", asOf: "Jul 8, 2026",
+    blurb: "~80 healthcare-technology names — genomics, diagnostics, precision medicine, robotic surgery, and health AI. The \"robotics brain applied to medicine\" sibling of ROBO. Small fund (~$56M) · 0.68% ER.",
+    holdings: [
+      { t: "NTRA", name: "Natera", w: 2.3 }, { t: "GH", name: "Guardant Health", w: 2.3 }, { t: "TWST", name: "Twist Bioscience", w: 2.2 },
+      { t: "TEM", name: "Tempus AI", w: 2.2 }, { t: "ARWR", name: "Arrowhead Pharma", w: 2.1 }, { t: "VRTX", name: "Vertex Pharma", w: 2.0 },
+      { t: "MRNA", name: "Moderna", w: 2.0 }, { t: "MEDP", name: "Medpace", w: 2.0 }, { t: "TMO", name: "Thermo Fisher", w: 2.0 }, { t: "LIVN", name: "LivaNova", w: 2.0 }
+    ]},
+  IBB: { name: "iShares Biotechnology ETF", category: "Disruptive Tech & Quantum", asOf: "Jul 2, 2026",
+    blurb: "The big passive biotech benchmark — cap-weighted toward large US biotech giants plus a long tail of 200+ smaller names. The broad way to own the sector. ~$9B · 0.44% ER.",
+    holdings: [
+      { t: "VRTX", name: "Vertex Pharma", w: 8.3 }, { t: "AMGN", name: "Amgen", w: 7.8 }, { t: "GILD", name: "Gilead", w: 6.9 },
+      { t: "REGN", name: "Regeneron", w: 5.0 }, { t: "ARGX", name: "argenx", w: 3.7 }, { t: "ALNY", name: "Alnylam", w: 3.1 },
+      { t: "NTRA", name: "Natera", w: 2.9 }, { t: "RVMD", name: "Revolution Medicines", w: 2.7 }, { t: "BIIB", name: "Biogen", w: 2.4 }, { t: "MRNA", name: "Moderna", w: 2.2 }
+    ]},
+  DISK: { name: "Tema Memory ETF", category: "AI Hardware", asOf: "Jul 10, 2026",
+    blurb: "Actively managed memory/storage fund (launched Jun 30, 2026) — much heavier in NAND flash, HDDs, and second-tier memory names than DRAM: SanDisk + Kioxia alone are ~36%. The storage side of the memory supercycle. ~$33M and growing fast · 0.75% ER.",
+    holdings: [
+      { t: "SNDK", name: "SanDisk", w: 18.0 }, { t: "Kioxia", name: "(TSE 285A)", w: 17.8 }, { t: "SK hynix", name: "(KRX 000660)", w: 14.3 },
+      { t: "Samsung", name: "(KRX 005930)", w: 5.2 }, { t: "WDC", name: "Western Digital", w: 4.9 }, { t: "STX", name: "Seagate", w: 4.9 },
+      { t: "SK Square", name: "(KRX 402340)", w: 4.8 }, { t: "MU", name: "Micron", w: 4.6 }, { t: "Innodisk", name: "(TWO 5289)", w: 4.2 }, { t: "Macronix", name: "(TW 2337)", w: 3.9 }
     ]}
 };
