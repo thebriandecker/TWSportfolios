@@ -25,7 +25,7 @@ button{width:100%;margin-top:10px;padding:13px;background:#c9a24a;color:#000;bor
 </form></div>
 <div id="guide"><iframe src="guide-9923bd8511920f2e.pdf" title="Peptide Guide"></iframe><a class="dl" href="guide-9923bd8511920f2e.pdf" download>Download PDF</a></div>
 <script>
-var ENDPOINT=""; // paste Apps Script web app URL here
+var ENDPOINT="https://script.google.com/macros/s/AKfycbyl40kP1WE2DlP9djxmr8U-3UOWZ0TkPv5SzuU2lUcD9-VTIabc8x4SVbnVPty8IjlC/exec"; // paste Apps Script web app URL here
 function open_(){gate.style.display='none';guide.style.display='block'}
 if(localStorage.getItem('alvera_guide_ok'))open_();
 f.onsubmit=function(e){e.preventDefault();var d=new FormData(f),fi=d.get('first').trim(),la=d.get('last').trim(),em=d.get('email').trim();
