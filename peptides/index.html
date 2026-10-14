@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alvera Clinical | Peptide Guide</title>
+<style>
+body{margin:0;background:#0b0b0b;color:#f5f1e6;font-family:Georgia,serif}
+#gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0b0b0b;z-index:9;padding:16px}
+.card{max-width:420px;width:100%;border:1px solid #c9a24a;padding:32px;border-radius:10px;text-align:center}
+h1{color:#c9a24a;letter-spacing:2px;font-size:22px;margin:0 0 6px}p{font-family:Arial,sans-serif;font-size:14px;color:#cfc8b8}
+input{width:100%;box-sizing:border-box;margin:6px 0;padding:12px;border-radius:6px;border:1px solid #444;background:#151515;color:#fff;font-size:16px}
+button{width:100%;margin-top:10px;padding:13px;background:#c9a24a;color:#000;border:0;border-radius:6px;font-weight:bold;font-size:16px;cursor:pointer}
+#err{color:#e07070;font-family:Arial;font-size:13px;min-height:16px}
+#guide{display:none;height:100vh}#guide iframe{width:100%;height:100%;border:0}
+.dl{position:fixed;bottom:12px;right:12px;background:#c9a24a;color:#000;padding:10px 14px;border-radius:6px;font-family:Arial;text-decoration:none}
+</style></head><body>
+<div id="gate"><form class="card" id="f" novalidate>
+<h1>ALVERA CLINICAL</h1><p>Unlock the free Peptide Guide. Enter your details for instant access.</p>
+<input name="first" placeholder="First name" required autocomplete="given-name">
+<input name="last" placeholder="Last name" required autocomplete="family-name">
+<input name="email" type="email" placeholder="Email" required autocomplete="email">
+<div id="err"></div><button>Unlock the Guide</button>
+<p style="font-size:11px">For research use only. 21+. We'll occasionally email you updates; unsubscribe anytime.</p>
+</form></div>
+<div id="guide"><iframe src="guide-9923bd8511920f2e.pdf" title="Peptide Guide"></iframe><a class="dl" href="guide-9923bd8511920f2e.pdf" download>Download PDF</a></div>
+<script>
+var ENDPOINT=""; // paste Apps Script web app URL here
+function open_(){gate.style.display='none';guide.style.display='block'}
+if(localStorage.getItem('alvera_guide_ok'))open_();
+f.onsubmit=function(e){e.preventDefault();var d=new FormData(f),fi=d.get('first').trim(),la=d.get('last').trim(),em=d.get('email').trim();
+if(!fi||!la)return err.textContent='Please enter your first and last name.';
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return err.textContent='Please enter a valid email.';
+var b=new URLSearchParams({first:fi,last:la,email:em,source:'peptide-guide'});
+if(ENDPOINT)fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:b}).catch(function(){});
+localStorage.setItem('alvera_guide_ok','1');open_()};
+</script></body></html>
