@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wealth Society Check In</title><meta name="robots" content="noindex">
+<style>
+*{box-sizing:border-box;margin:0}body{background:#02080C;color:#E6F7FA;font:13px/1.35 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;min-height:100vh}
+.w{max-width:440px;margin:0 auto;padding:18px 18px 14px}
+h1{font-size:15px;font-weight:700;color:#00E5FF;letter-spacing:.3px;border-bottom:1px solid #00E5FF33;padding-bottom:8px;margin-bottom:10px}
+p.i{font-size:12px;color:#B8C7CC;margin-bottom:14px}
+.r{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.r label{flex:0 0 96px;font-size:13px;font-weight:600}
+.r input,.r select{flex:1;min-width:0;background:transparent;border:0;border-bottom:1.5px solid #00E5FF;color:#fff;font:inherit;font-size:16px;padding:2px 2px 3px;outline:none;border-radius:0}
+.r select{-webkit-appearance:none;appearance:none}.r select option{background:#02080C}
+.r input:focus,.r select:focus{border-bottom-color:#7FF3FF;background:#00E5FF0D}
+h2{font-size:13px;color:#00E5FF;margin:16px 0 6px}
+.c{display:flex;align-items:center;gap:10px;padding:5px 0;font-size:13px}
+.c input{width:18px;height:18px;accent-color:#00E5FF;flex:none}
+button{margin-top:14px;width:100%;background:#00E5FF;color:#02080C;border:0;border-radius:8px;font-family:inherit;font-weight:700;font-size:14px;padding:12px}
+button:disabled{opacity:.6}.e{color:#ff7a7a;font-size:12px;min-height:14px;margin-top:6px}
+#ty{display:none;text-align:center;padding-top:40px}#ty h2{font-size:16px;margin-bottom:8px}
+</style></head><body><div class="w">
+<h1>Wealth Society Check In</h1>
+<form id="f" novalidate>
+<p class="i">We just wanted to check your current progress to see what you have completed so far. Please check all the boxes for the items you have completed, as this helps us track your progress. Everyone that accurately completes the survey will get entered to win a free 1:1 call with Brian.</p>
+<div class="r"><label for="name">Name:</label><input id="name" name="name" autocomplete="name" required></div>
+<div class="r"><label for="cell">Cell:</label><input id="cell" name="cell" type="tel" autocomplete="tel" inputmode="tel" required></div>
+<div class="r"><label for="email">Email:</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="r"><label for="month">Month joined:</label><select id="month" name="month" required><option value="">Select…</option><option>Jun 2026</option><option>Jul 2026</option><option>Aug 2026</option><option>Sep 2026</option><option>Oct 2026</option><option>Other</option></select></div>
+<h2>What have you completed?</h2>
+<div id="cl"></div>
+<button id="b" type="submit">Submit</button><div class="e" id="er"></div>
+</form>
+<div id="ty"><h2>Thank you!</h2><p class="i">Your check-in is in. You're entered for the free 1:1 call with Brian.</p></div>
+</div><script>
+var ENDPOINT="https://script.google.com/macros/s/AKfycbyoQk85aD5uBqrM0jpGNvfKbhJ8GQ5-eJh_irOydYKO5svrejMvEVGsOirf1N0gHYw/exec"; // paste Apps Script web app /exec URL here before publishing
+var I=['New Member Training A','New Member Training B','Logged into Midas','Used Midas Stock Analyzer','Set up Midas Stock Alerts','Followed SavvyTrader Live Portfolio','Texted TWS to 866-607-3230'];
+var cl=document.getElementById('cl');I.forEach(function(t,k){cl.insertAdjacentHTML('beforeend','<label class="c"><input type="checkbox" name="done" value="'+t+'">'+t+'</label>')});
+document.getElementById('f').onsubmit=function(ev){ev.preventDefault();var f=this,er=document.getElementById('er'),m='';
+var n=f.name.value.trim(),c=f.cell.value.trim(),e=f.email.value.trim();
+if(!n)m='Please enter your name.';else if(c.replace(/\D/g,'').length<10)m='Please enter a valid cell number.';else if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e))m='Please enter a valid email.';else if(!f.month.value)m='Please select the month you joined.';
+er.textContent=m;if(m)return;document.getElementById('b').disabled=true;
+var b=new URLSearchParams();b.append('name',n);b.append('cell',c);b.append('email',e);b.append('month',f.month.value);
+f.querySelectorAll('input[name=done]:checked').forEach(function(x){b.append('done',x.value)});
+var go=function(){f.style.display='none';document.getElementById('ty').style.display='block'};
+if(ENDPOINT)fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:b}).then(go,go);else go();};
+</script></body></html>
